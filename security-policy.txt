@@ -1,0 +1,87 @@
+Healthatom Bug Bounty Program
+
+We appreciate and sincerely thank you for reporting vulnerabilities in our websites. Before submitting a report, please take the time to read and understand this policy.
+
+This Bug Bounty Program outlines the guidelines and procedures for security researchers to responsibly report security vulnerabilities discovered within our platforms.
+
+1. Our Platform
+
+At Healthatom, we provide patient and administrative management platforms for dental and medical centers across more than 20 countries. Our platforms, Dentalink and Medilink, require clients to complete a subscription form and accept our terms of service and privacy policy. Once clients have access to the platform and subscribe to a plan, they can upload administrative and patient information.
+
+2. Follow the rules and act in good faith
+
+We are committed to encouraging responsible reporting of vulnerabilities, misconfigurations, programming errors, and similar issues in our platforms. By means of this policy, we want to assure you that we will not take legal action or involve law enforcement if you adhere to the following rules in good faith:
+
+(i) Participants must not disclose any vulnerabilities publicly.
+(ii) Participants must not perform any actions that could harm our users or disrupt our services.
+(iii) Participants must not disclose our information;
+(ii) Participants must not modify or delete our data.
+(iii) Participants can only use their own accounts. Under no circumstances can you use our clients' accounts.
+
+In essence, we expect you to act ethically.
+
+This Bug Bounty Program covers vulnerabilities identified within our platforms, including but not limited to:
+
+Web application vulnerabilities
+API vulnerabilities
+Authentication and authorization flaws
+Cross-Site Scripting (XSS)
+Cross-Site Request Forgery (CSRF)
+Remote Code Execution (RCE)
+SQL Injection (SQLi)
+Server-side Request Forgery (SSRF)
+Information disclosure issues
+The foregoing also applies to our domains detailed: below:
+
+healthatom.com
+healthatom.cl
+healthatom.io
+softwaredentalink.com
+softwaremedilink.com
+gerty.com
+dentalink.cl
+medilink.cl
+
+3. Our Conditions
+
+- We will only receive email reports. Submit your reports to security@healthatom.com. If your report includes sensitive information (such as passwords, personally identifiable information, patient data, or images), please send it encrypted.
+- Provide detailed information about the vulnerability, including steps to reproduce and proof-of-concept code if applicable.- If you include links to examples or additional descriptions related to the problem or vulnerability, make sure they are accessible.
+
+4. Exclusions
+
+The following types of vulnerabilities are not eligible for rewards under this Bug Bounty Program:
+
+- Vulnerabilities that have already been reported.
+- Vulnerabilities that do not impact the security of our platforms.
+- Vulnerabilities reported with insufficient data to assess or reproduce the reported problem.
+- Vulnerabilities in which we were unable to reproduce the problem, and we are reasonably certain that the reported issue is not accurate.
+
+5. Rewards For You
+
+In accordance with the rules set forth above and the impact of the reported bug, we will determine the corresponding reward, considering the following:
+
+Low impact bug: USD $50
+Medium impact bug: USD $150
+High impact bug: USD $500
+Critical impact bug: USD $2,500
+
+However, if you discover a severe issue, please contact us to discuss a potential higher reward. We are open to increasing the reward amount for significant problems.
+
+6. Report Handling Process
+
+Send your report to security@healthatom.com. We will triage the report and categorize it as follows:
+
+If the reported vulnerability qualifies as not eligible, we will send you an email indicating that the vulnerability will not be considered. In case we could not reproduce the problem due to incomplete information. We will request clarification or additional details to reconsider the report.
+
+If we were able to reproduce the problem reported and have determined it to be valid and impactful, we will prioritize fixing it, and the researcher will be asked to verify whether the issue has been successfully resolved. In such cases, we will provide a reward for the researcher's assistance. Please note that the final determination of the bug's impact remains solely at our discretion.
+
+For Chile: Te solicitaremos la emision de una boleta de honorarios a nuestra empresa (enviandola a contabilidad@healthatom.com) y tus datos bancarios, de modo de realizar la transferencia bancaria. La boleta de honorarios debera ser hecha por un monto equivalente en pesos chilenos al valor del dolar observado del dia de su emision. Ademas, necesitaremos la firma de un Acuerdo de Confidencialidad.
+
+Foreign: We will request your PayPal email address and a signed Non-Disclosure Agreement (NDA) to facilitate a transfer to your account.
+
+7. Response Time
+We aim to triage your report within 5 business days of receiving your email. If your report is accepted, it may take up to 10 business days from the time we receive your payment details to process the reward payment. However, we typically complete this process much faster.
+
+Please note that the resolution time for accepted reports may vary based on the criticality and priority of the issue.
+
+This policy was last updated on February 23, 2024.
