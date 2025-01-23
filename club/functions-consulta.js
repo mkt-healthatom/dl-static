@@ -24,7 +24,7 @@ function handleError() {
     }
 
     try {
-      const webhookUrl = "https://hook.us1.make.com/amdu8m1iwavqa8brnxrwdqgsetgm6er7";
+      const webhookUrl = "https://webhook.site/d8b28ea3-d314-45bb-ae32-8e3d5f3ccf8f";
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
