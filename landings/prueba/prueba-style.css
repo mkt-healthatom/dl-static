@@ -1,0 +1,67 @@
+/* Encapsulación de estilos usando .landing-root */
+.landing-root {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Estilos para el header */
+  .landing-header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-bottom: 3px solid #0078d7;
+  }
+  
+  .landing-header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #0078d7;
+  }
+  
+  .landing-header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  /* Estilos para el contenido */
+  .landing-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+  }
+  
+  .landing-card {
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .landing-card img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+  
+  .landing-card h2 {
+    margin-top: 10px;
+    color: #0078d7;
+  }
+  
+  .landing-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+  
+  /* Estilos para el footer */
+  .landing-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f4f8;
+    border-top: 3px solid #0078d7;
+    font-size: 0.9em;
+  }
+  
