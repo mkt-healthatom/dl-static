@@ -7,14 +7,14 @@
   /* Estilos para el header */
   .landing-header {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #f0f4f8;
     border-bottom: 3px solid #0078d7;
   }
   
   .landing-header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #0078d7;
   }
   
@@ -23,45 +23,131 @@
     margin: 10px 0;
   }
   
-  /* Estilos para el contenido */
-  .landing-content {
+  /* Sección de servicios */
+  .landing-services {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .landing-services h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0078d7;
+  }
+  
+  .service-list {
     display: flex;
     justify-content: center;
     gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
+    flex-wrap: wrap;
   }
   
-  .landing-card {
+  .service-card {
     width: 250px;
     padding: 15px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
   }
   
-  .landing-card img {
+  .service-card img {
     max-width: 100%;
     border-radius: 50%;
   }
   
-  .landing-card h2 {
+  .service-card h3 {
     margin-top: 10px;
     color: #0078d7;
   }
   
-  .landing-card p {
+  .service-card p {
     font-size: 0.9em;
     line-height: 1.4;
   }
   
-  /* Estilos para el footer */
-  .landing-footer {
-    text-align: center;
-    padding: 10px;
+  /* Sección de testimonios */
+  .landing-testimonials {
+    padding: 40px 20px;
     background-color: #f0f4f8;
-    border-top: 3px solid #0078d7;
-    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .landing-testimonials h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0078d7;
+  }
+  
+  .testimonial-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-style: italic;
+  }
+  
+  .testimonial span {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  /* Sección de contacto */
+  .landing-contact {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .landing-contact h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #0078d7;
+  }
+  
+  .landing-contact p {
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: #0078d7;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005bb5;
   }
   
