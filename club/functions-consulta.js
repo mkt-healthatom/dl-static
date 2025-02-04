@@ -24,7 +24,7 @@ function handleError() {
     }
 
     try {
-      const webhookUrl = "https://n8n.services.healthatom.com/webhook-test/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
+      const webhookUrl = "https://n8n.services.healthatom.com/webhook/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
