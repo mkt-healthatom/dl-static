@@ -72,7 +72,7 @@ function handleError() {
     const redemptionMessage = document.querySelector(".consulta-redencion-status-message");
 
     try {
-      const webhookUrl = "https://hook.us1.make.com/ha1oq3vctkjm1wj44w64n4prd78iggri";
+      const webhookUrl = "https://n8n.services.healthatom.com/webhook-test/9168704b-df1a-47cb-9252-c677c0a17030";
       const response = await fetch(webhookUrl, {
         method: "POST",
         headers: {
