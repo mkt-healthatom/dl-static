@@ -1,0 +1,301 @@
+
+/*VARIABLES */
+:root {
+    /* TIPOGRAFÍAS */
+    --paragraph: Inter, sans-serif;
+
+    /* TAMAÑOS DE TIPOGRAFÍAS (de mayor a menor) */
+    --headline-xxl: 56px;
+    --headline-xl: 48px;
+    --headline-l: 40px;
+    --headline-m: 32px;
+    --headline-s: 28px;
+    --headline-xs: 24px;
+    --text-xl: 20px;
+    --text-l: 16px;
+    --text-m: 14px;
+    --text-s: 12px;
+    --text-xs: 10px;
+
+    /* COLORES */
+    /* Azules */
+    --blue-300: red;
+    --blue-200: #00408c;
+    --blue-150: #0761b4;
+    --blue-100: #0879ca;
+    --blue-80: #9ebdd9;
+    --blue-60: #dce4eb;
+    --blue-40: #e8ecef;
+    --dentalink-blue-500: #17a6e0;
+    --dentalink-blue-100: #e1f3fd;
+
+    /* Textos */
+    --text-100: #26282c;
+    --text-80: #4e5565;
+    --text-60: #6d7488;
+    --text-40: #929bb2;
+
+    /* Blancos */
+    --white-00: white;
+    --grey-20: #fafafa;
+
+    /* Secundarios */
+    --secondary-200: #3c16aa;
+    --secondary-100: #521ee6;
+    --secondary-50: #7f52fe;
+
+    /* Otros */
+    --shadow-black: #2626261a;
+}
+
+/*VARIABLES */
+
+
+
+ .content-hero-text-getnet{min-height: 652px;  line-height: 24px;}
+
+/* TÍTULOS */
+.title-getnet, .title-section-2, .title-section-3, .title-section-4 {
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.title-getnet {
+    font-size: var(--headline-xl);
+    line-height: 52.80px;
+}
+
+.title-section-2, .title-section-4 {
+    font-size: var(--headline-m);
+    line-height: 38.40px;
+}
+
+.title-section-3 {
+    font-size: var(--headline-s);
+    line-height: 38.40px;
+}
+
+/* SUBTÍTULOS */
+.subtitle-getnet {
+    font-size: var(--text-l);
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 8px; margin-bottom: 34px;
+}
+
+/* SECCIONES */
+.section-2, .section-3, .section-4 {
+    font-family: var(--paragraph);
+}
+
+.section-2 {
+    background-color: var(--dentalink-blue-100);
+    min-height: 568px;
+}
+
+.section-3 {
+    background-color: var(--white-00);
+    color: var(--text-60);
+    min-height: 302px;
+}
+
+
+.logo-visa-getnet {
+width: 145px;
+}
+
+.logo-amex-getnet{
+width: 68px;
+}
+
+.logo-mastercard-getnet{
+    width: 109px;
+}
+
+.section-4 {
+    min-height: 550px;
+}
+
+/* BOTONES CTA */
+.cta_hero, .cta_cliente {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    font-family: var(--paragraph);
+    font-size: var(--text-l);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 6px;
+    flex-direction: row;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    font-weight: 400;
+    line-height: 120%;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    margin-top: 24px;
+}
+
+.cta_hero {
+    border: 1px solid var(--blue-100);
+    background-color: var(--blue-100);
+    color: var(--white-00);
+}
+
+.cta_hero:hover {
+    background-color: var(--blue-150);
+}
+
+.cta_cliente {
+    border: 1px solid var(--blue-100);
+    background-color: transparent;
+    color: var(--blue-100);
+}
+
+.cta_cliente:hover {
+    background-color: var(--blue-150);
+    color: var(--white-00);
+}
+
+/* TARJETAS */
+.card, .block-getnet-img {
+    background-color: var(--white-00);
+    border: 1px solid #E3E3E3;
+    border-radius: 16px;
+}
+
+.card {
+    color: var(--text-100);
+    min-height: 270px;
+    padding: 24px;
+}
+
+.card h3, .card p {
+    font-family: var(--paragraph);
+    margin-top: 16px;
+}
+
+.card h3 {
+    font-size: var(--text-l);
+    font-weight: bold;
+}
+
+.card p {
+    font-size: var(--text-m);
+}
+
+.block-getnet-img {
+    width: 460px;
+    min-height: 456px;
+    overflow: hidden;
+    border: solid #E3E3E3 1px;
+    background-color: var(--grey-20);
+}
+
+.block-getnet-img .img-top-block-getnet {
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.block-getnet-img .contenido {
+    text-align: center;
+    padding: 32px;
+    color: var(--text-100);
+}
+
+.block-getnet-img h2 {
+    font-size: var(--text-xl);
+    margin-top: 32px;
+}
+
+.block-getnet-img p {
+    font-size: var(--text-m);
+    margin-top: 16px;
+    padding: 0 32px;
+}
+
+/* ESPACIADOS */
+.mt-32 {
+    margin-top: 32px;
+}
+
+.pd-64-getnet {
+    padding: 64px;
+}
+
+/* HERO */
+.hero-getnet {
+    font-family: var(--paragraph);
+    min-height: 652px;
+}
+
+.hero-image {
+    min-height: 652px;
+    background-image: url(img_getnet/hero-getnet.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.img-equipo-hero-getnet {
+    height: auto;
+    width: 485px;
+}
+
+.getnet-tarjeta-img {
+    width: 400px;
+}
+
+.conten-met-pag{
+    gap: 80px;
+}
+
+.cta-block{
+    width: 60%;
+}
+
+.container-icon-flex-getnet{
+    display: flex; flex-flow: wrap; grid-row-gap: 18px; grid-column-gap: 24px; margin-top:32px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 575px) {
+    .img-equipo-hero-getnet {
+        width: 350px;}
+
+    .getnet-tarjeta-img {
+        width: 300px !important;}
+
+    .pd-64-getnet {
+        padding: 32px !important;}
+
+    .hero-image {
+        min-height: 490px;}
+
+    .card {margin-top: 18px;}
+    .block-getnet-img {margin-top: 18px;}
+    .conten-met-pag{gap:0px;}
+    .cta-block{width: 90% !important;}
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+   .card {margin-top: 18px;}
+   .block-getnet-img {margin-top: 18px;}
+   .content-hero-text-getnet {min-height:500px;}
+
+
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+ 
+    .card {margin-top: 18px;}   
+    .block-getnet-img {margin-top: 18px;}
+    .content-hero-text-getnet {min-height:500px;}
+
+}
+
+@media (min-width: 1200px) {}
