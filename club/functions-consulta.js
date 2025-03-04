@@ -24,7 +24,7 @@ async function fetchAndDisplayCodeData() {
   }
 
   try {
-      const webhookUrl = "https://n8n.services.healthatom.com/webhook/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
+      const webhookUrl = "https://marketingha.app.n8n.cloud/webhook/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
       const response = await fetch(webhookUrl, {
           method: "POST",
           headers: {
@@ -80,7 +80,7 @@ async function changeCodeStatus() {
   const redemptionMessage = document.querySelector(".consulta-redencion-status-message");
 
   try {
-      const webhookUrl = "https://n8n.services.healthatom.com/webhook/9168704b-df1a-47cb-9252-c677c0a17030";
+      const webhookUrl = "https://marketingha.app.n8n.cloud/webhook/9168704b-df1a-47cb-9252-c677c0a17030";
       const response = await fetch(webhookUrl, {
           method: "POST",
           headers: {
