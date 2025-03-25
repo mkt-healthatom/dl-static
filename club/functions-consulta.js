@@ -15,69 +15,67 @@ function handleError() {
 }
 
 // Consulta webhook y actualiza datos
+let turnstileToken = null;
+
+// Esta función la llama Turnstile automáticamente cuando obtiene un token válido
+function onTurnstileSuccess(token) {
+  turnstileToken = token;
+  fetchAndDisplayCodeData();
+}
+
 async function fetchAndDisplayCodeData() {
-    const code = getUrlParam("c");
-  
-    if (!code) {
-      handleError();
-      return;
-    }
-  
-    // Esperar que Turnstile esté listo y obtener token
-    const token = turnstile.getResponse();
-  
-    if (!token) {
-      console.error("Token de Turnstile no disponible todavía.");
-      handleError();
-      return;
-    }
-  
-    try {
-      const webhookUrl = "https://marketingha.app.n8n.cloud/webhook-test/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
-      const response = await fetch(webhookUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          code: code,
-          "cf-turnstile-response": token // ✅ nombre obligatorio
-        }),
-      });
-  
-      if (!response.ok) {
-        throw new Error("Error al consultar el código.");
-      }
-  
-      const data = await response.json();
-  
-      if (!data.data.code) {
-        handleError();
-        return;
-      }
-  
-      document.querySelector('[code-validation="code_requested"]').textContent =
-        data.data.code || "No disponible";
-      document.querySelector('[code-validation="code_status"]').textContent =
-        capitalizeFirstLetter(data.data.code_status) || "No disponible";
-      document.querySelector('[code-validation="code_date"]').textContent =
-        formatDate(data.data.code_lifespan) || "No disponible";
-      document.querySelector('[code-validation="code_limit"]').textContent =
-        data.data["code_usage-limit"] || "No disponible";
-      document.querySelector('[code-validation="code_email"]').textContent =
-        data.data.request_email || "No disponible";
-  
-      const statusButton = document.getElementById("status_action");
-      if (data.data.code_status.toLowerCase() === "activo") {
-        statusButton.style.display = "block";
-      } else {
-        statusButton.style.display = "none";
-      }
-    } catch (error) {
-      handleError();
-    }
+  const code = getUrlParam("c");
+
+  if (!code || !turnstileToken) {
+    handleError();
+    return;
   }
-  
+
+  try {
+    const webhookUrl = "https://marketingha.app.n8n.cloud/webhook-test/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
+    const response = await fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        code: code,
+        "cf-turnstile-response": turnstileToken // ✅ obligatorio
+      }),
+    });
+
+    if (!response.ok) throw new Error("Error al consultar el código.");
+    const data = await response.json();
+
+    if (!data.data.code) {
+      handleError();
+      return;
+    }
+
+    // Resto del código sigue igual
+    document.querySelector('[code-validation="code_requested"]').textContent =
+      data.data.code || "No disponible";
+    document.querySelector('[code-validation="code_status"]').textContent =
+      capitalizeFirstLetter(data.data.code_status) || "No disponible";
+    document.querySelector('[code-validation="code_date"]').textContent =
+      formatDate(data.data.code_lifespan) || "No disponible";
+    document.querySelector('[code-validation="code_limit"]').textContent =
+      data.data["code_usage-limit"] || "No disponible";
+    document.querySelector('[code-validation="code_email"]').textContent =
+      data.data.request_email || "No disponible";
+
+    const statusButton = document.getElementById("status_action");
+    statusButton.style.display =
+      data.data.code_status.toLowerCase() === "activo" ? "block" : "none";
+  } catch (error) {
+    handleError();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Forzar render del CAPTCHA invisible al cargar
+  turnstile.render('.cf-turnstile');
+});
 
 // Maneja redención de código y actualiza datos
 async function changeCodeStatus() {
