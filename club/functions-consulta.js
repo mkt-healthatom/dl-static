@@ -32,7 +32,7 @@ async function fetchAndDisplayCodeData() {
   }
 
   try {
-    const webhookUrl = "https://marketingha.app.n8n.cloud/webhook/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
+    const webhookUrl = "https://marketingha.app.n8n.cloud/webhook-test/910ad57d-8e93-44ac-aa9e-4e4ade2a0f4b";
     const response = await fetch(webhookUrl, {
       method: "POST",
       headers: {
