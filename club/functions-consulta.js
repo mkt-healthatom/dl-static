@@ -54,8 +54,8 @@ async function fetchAndDisplayCodeData() {
       
       // Mostrar los elementos si todo es correcto
       document.querySelector(".consulta-error-message").style.display = "none";
-      document.querySelector(".consulta-headline-wrapper").style.display = "block";
-      document.querySelector(".consulta-table-wrapper").style.display = "block";
+      document.querySelector(".consulta-headline-wrapper").style.display = "flex";
+      document.querySelector(".consulta-table-wrapper").style.display = "flex";
       
       // Mostrar los datos
       document.querySelector('[code-validation="code_requested"]').textContent =
