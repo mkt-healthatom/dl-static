@@ -72,11 +72,6 @@ async function fetchAndDisplayCodeData() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Forzar render del CAPTCHA invisible al cargar
-  turnstile.render('.cf-turnstile');
-});
-
 // Maneja redención de código y actualiza datos
 async function changeCodeStatus() {
   const code = getUrlParam("c");
