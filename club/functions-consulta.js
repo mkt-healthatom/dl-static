@@ -48,25 +48,32 @@ async function fetchAndDisplayCodeData() {
     const data = await response.json();
 
     if (!data.data.code) {
-      handleError();
-      return;
-    }
-
-    // Resto del código sigue igual
-    document.querySelector('[code-validation="code_requested"]').textContent =
-      data.data.code || "No disponible";
-    document.querySelector('[code-validation="code_status"]').textContent =
-      capitalizeFirstLetter(data.data.code_status) || "No disponible";
-    document.querySelector('[code-validation="code_date"]').textContent =
-      formatDate(data.data.code_lifespan) || "No disponible";
-    document.querySelector('[code-validation="code_limit"]').textContent =
-      data.data["code_usage-limit"] || "No disponible";
-    document.querySelector('[code-validation="code_email"]').textContent =
-      data.data.request_email || "No disponible";
-
-    const statusButton = document.getElementById("status_action");
-    statusButton.style.display =
-      data.data.code_status.toLowerCase() === "activo" ? "block" : "none";
+        handleError();
+        return;
+      }
+      
+      // Mostrar los elementos si todo es correcto
+      document.querySelector(".consulta-error-message").style.display = "none";
+      document.querySelector(".consulta-headline-wrapper").style.display = "block";
+      document.querySelector(".consulta-table-wrapper").style.display = "block";
+      
+      // Mostrar los datos
+      document.querySelector('[code-validation="code_requested"]').textContent =
+        data.data.code || "No disponible";
+      document.querySelector('[code-validation="code_status"]').textContent =
+        capitalizeFirstLetter(data.data.code_status) || "No disponible";
+      document.querySelector('[code-validation="code_date"]').textContent =
+        formatDate(data.data.code_lifespan) || "No disponible";
+      document.querySelector('[code-validation="code_limit"]').textContent =
+        data.data["code_usage-limit"] || "No disponible";
+      document.querySelector('[code-validation="code_email"]').textContent =
+        data.data.request_email || "No disponible";
+      
+      // Mostrar u ocultar botón según el estado
+      const statusButton = document.getElementById("status_action");
+      statusButton.style.display =
+        data.data.code_status.toLowerCase() === "activo" ? "block" : "none";
+      
   } catch (error) {
     handleError();
   }
