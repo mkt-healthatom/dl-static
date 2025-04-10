@@ -31,7 +31,7 @@
       };
 
       try {
-        const response = await fetch("https://marketingha.app.n8n.cloud/webhook-test/42ec7358-0e62-46b4-a518-1aeebaeefa91", {
+        const response = await fetch("https://marketingha.app.n8n.cloud/webhook/42ec7358-0e62-46b4-a518-1aeebaeefa91", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
